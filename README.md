@@ -11,4 +11,6 @@ Table of Contents
 The PROMPT database is aviable in compressed format here. It is a MySql database and to use it one need to improt the database into MySql Community Server.
 
 # Enitiy Relationship Diagram
+The PROMPT database consists for seven entities as shown in the figure and the description of each enitity is given [here](PR_Algorithm.pdf).
 
+![image](https://github.com/IlyasAzeem/PROMPT_DB/blob/master/ERD.png)
