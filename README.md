@@ -40,3 +40,16 @@ We used GitHub API V3 to extracted pull requests data from 21 popular GitHub pro
 3. Pulls Requests Extraction: The last step in the data crwaling was to extract pull requests fromt the selected projects. We used the script [crawler-pull-request-number](Data_Crawlers/crawler-pull-request-number.py) to extracted the pull requests from the selected projects. The extracted pull requests are saved in json format in a text file available [here](Features_Extraction/filter-raw-data.txt). 
 ###### Features Extraction
 In order to extrat features from the raw data used the two scripts [generate_accept](Features_Extraction/generate_accept.py) and [generate_response](Features_Extraction/generate_response.py). The first script extracts all the features of the pull requests mentioned in the schema above (except the sentiment and textual labels) with a label representing whether the pull request is accepted or not. Similarly, the second script extracts all the same features of the pull requests along with their daily responses. The label response_label represents whether a given pull request is responded on a given day or not.
+###### Sentiment Analysis and Textual Labeling
+We used Senti4SD [1], widely applied in Software engineering research, to identify the sentiment of the textual features of the pull requests including title and body together, user comments and review comments.
+Pull requests are  usually  associated  to  certain  maintenance  and  evolution tasks such as ﬁxing a bug, adding new features, and/or improving existing features. Hence, the type of the maintenance and evolution task associated to each PR is crucial to select the  set  of  pull  requests  to  integrate  with  the  next  release. For this reason, we used DECA [2], [3], a state-of-the-art tool  to  categorize  development  discussions,  to  classify  pull requests title and body according to maintenance and evolution tasks. The final datasets in the csv format with all the features can be found [here](Data_CSV_Files).
+###### Import data to MySql
+We created a database with a name prompt_db in MySql Community Server and imported all the pull requests data into the database using python script available [here](). Before importing data to the database we splited the [accept.csv](Data_CSV_Files/accept.csv) file into various lists according to the tables in the database. The script used for splitting the accept.csv file is given [here](). For the response table, the daily responses of the pull requests in table Pull_Request are imported from the [response.csv](Data_CSV_Files/response.csv).
+
+
+
+
+###### References
+[1] F.  Calefato,  F.  Lanubile,  F.  Maiorano,  and  N.  Novielli,  “Sentiment polarity  detection  for  software  development,”  Empirical  Softw.  Engg., vol. 23, no. 3, 2018.
+[2] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and H. C. Gall, “Development emails content analyzer: Intention mining in developer discussions (T),” in International Conference on Automated Software Engineering, ASE 2015, 2015, pp. 12–23.
+[3] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and  H.  C.  Gall,  “DECA:  development  emails  content  analyzer,”  in International Conference on Software Engineering, 2016, pp. 641–644.
