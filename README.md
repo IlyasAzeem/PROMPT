@@ -7,15 +7,15 @@ Table of Contents
 3. Tables
 4. Replication Instructions
 
-# PROMPT Database
+## PROMPT Database
 The PROMPT database is aviable in compressed format here. It is a MySql database and to use it one need to improt the database into MySql Community Server.
 
-# Enitiy Relationship Diagram
+## Enitiy Relationship Diagram
 The PROMPT database consists for seven entities as shown in the figure and the description of each enitity is given [here](PR_Algorithm.pdf).
 
 ![PROMPT Schema](https://github.com/IlyasAzeem/PROMPT_DB/blob/master/ERD.png)
 
-# Tables
+## Tables
 ###### Project
 Project table contains the basic statistical information about a project e.g. watches, forks etc.
 ###### Pull Request
@@ -31,7 +31,7 @@ Issue table provide information related to the number of issues associated with 
 ###### Response
 The response table contains the daily pull requests response information since it is created till the closing time. The column response label is Boolean which indicates either the pull request is responded on a particular day or not.
 
-# Replication Instructions
+## Replication Instructions
 In the following sub-section we describe the steps how did we crawled the pull requests using GitHub API, extracted features from raw data, and then imported the extracted features into MySql database.
 ###### Data Crwalers
 We used GitHub API V3 to extracted pull requests data from 21 popular GitHub projects since the projects are initiated till February 2018. The data crwaling process has been performed in three steps.
@@ -49,7 +49,7 @@ We created a database with a name prompt_db in MySql Community Server and import
 
 
 
-###### References
+## References
 [1] F.  Calefato,  F.  Lanubile,  F.  Maiorano,  and  N.  Novielli,  “Sentiment polarity  detection  for  software  development,”  Empirical  Softw.  Engg., vol. 23, no. 3, 2018.
 [2] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and H. C. Gall, “Development emails content analyzer: Intention mining in developer discussions (T),” in International Conference on Automated Software Engineering, ASE 2015, 2015, pp. 12–23.
 [3] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and  H.  C.  Gall,  “DECA:  development  emails  content  analyzer,”  in International Conference on Software Engineering, 2016, pp. 641–644.
