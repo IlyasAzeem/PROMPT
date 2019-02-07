@@ -51,5 +51,7 @@ We created a database with a name prompt_db in MySql Community Server and import
 
 ## References
 [1] F.  Calefato,  F.  Lanubile,  F.  Maiorano,  and  N.  Novielli,  “Sentiment polarity  detection  for  software  development,”  Empirical  Softw.  Engg., vol. 23, no. 3, 2018.
+
 [2] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and H. C. Gall, “Development emails content analyzer: Intention mining in developer discussions (T),” in International Conference on Automated Software Engineering, ASE 2015, 2015, pp. 12–23.
+
 [3] A. D. Sorbo, S. Panichella, C. A. Visaggio, M. D. Penta, G. Canfora, and  H.  C.  Gall,  “DECA:  development  emails  content  analyzer,”  in International Conference on Software Engineering, 2016, pp. 641–644.
