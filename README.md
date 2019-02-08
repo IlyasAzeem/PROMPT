@@ -35,7 +35,7 @@ The response table contains the daily pull requests response information since i
 In the following sub-section we describe the steps how did we crawled the pull requests using GitHub API, extracted features from raw data, and then imported the extracted features into MySql database.
 ###### Data Crwalers
 We used GitHub API V3 to extracted pull requests data from 21 popular GitHub projects since the projects are initiated till February 2018. The data crwaling process has been performed in three steps.
-1. Organizations: Popular open source projects are generally tied to organizations. Firstly, we crawled more than 2.4 million organizations on the GitHub using the script [crawler-organizations](Replication_Package/Data_Crawlers/crawler-orginizations.py).
+1. Organizations: Popular open source projects are generally tied to organizations. Firstly, we crawled more than 2.4 million organizations on the GitHub using the script [crawler-organizations](/Replication_Package/Data_Crawlers/crawler-orginizations.py).
 2. Projects Selection:  In order to obtain high-quality experiment data and select projects that are developed in strict accordance with the process of the Pull-based development model we used the script [crawler-projects](Replication_Package/Data_Crawlers/crawler-projects.py).
 3. Pulls Requests Extraction: The last step in the data crwaling was to extract pull requests fromt the selected projects. We used the script [crawler-pull-request-number](Replication_Package/Data_Crawlers/crawler-pull-request-number.py) to extracted the pull requests from the selected projects. The extracted pull requests are saved in json format in a text file available [here](Features_Extraction/filter-raw-data.txt). 
 ###### Features Extraction
