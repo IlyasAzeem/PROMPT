@@ -1,11 +1,11 @@
 # PrioRitizatiOn & Management of Pull requesTs (PROMPT) dataset Online Appendix
 This repo provides instructions about the schema and use of the PROMPT dataset. PROMPT is a MySql database which contains 236514 pull requests, along with their daily responses, extracted from GitHub. In the following sections, we explained how to replicate your study.
 
-Table of Contents
-1. PROMPT Database
-2. Enitiy Relationship Diagram
-3. Tables
-4. Replication Instructions
+[Table of Contents]
+1. [PROMPT Database]
+2. [Enitiy Relationship Diagram]
+3. [Tables]
+4. [Replication Instructions]
 
 ## PROMPT Database
 The PROMPT database is avialable in compressed format [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db). It is a MySql database and to use it one needs to import the database into MySql Community Server.
