@@ -48,12 +48,12 @@ Pull requests are usually associated with certain maintenance and evolution task
 We created a database in MySql Community Server and imported all the pull requests data into the database using python script available [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/import_data_to_db.py). Before importing data to the database we split the accept.csv file into various lists according to the tables in the database. The script used for splitting the accept.csv file is given [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/create_list_for_db.py). For the response table, the daily responses of the pull requests in table Pull_Request are imported from the response.csv. After spliting the list use the script [create_tables](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/create_tables.py) to create all the tables the database. The PROMPT dataset in the database format is avaiable [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db).
 ###### How to use the dataset and run the script
 The usage of the underline used python script is the following
-'''
+```
 1. First run the script create_list_for_db.py
 2. Then create a database in MySql Community server workbench 
 3. Run the script create_tables.py to create all the required tables
 4. At the end run the script Import_data_to_db.py to import the data to the database
-'''
+```
 
 
 ## References
