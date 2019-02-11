@@ -6,6 +6,7 @@ Table of Contents
 2. Enitiy Relationship Diagram
 3. Tables
 4. Replication Instructions
+5. How to use the dataset and run the script
 
 ## PROMPT Database
 The PROMPT database is avialable in compressed format [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db). It is a MySql database and to use it one needs to import the database into MySql Community Server.
@@ -45,8 +46,14 @@ We used Senti4SD [1], widely applied in Software engineering research, to identi
 Pull requests are usually associated with certain maintenance and evolution tasks such as ﬁxing a bug, adding new features, and/or improving existing features. Hence, the type of maintenance and evolution task associated with each PR is crucial to select the set of pull requests to integrate with the next release. For this reason, we used DECA [2], [3], a state-of-the-art tool to categorize development discussions, to classify pull requests title and body according to maintenance and evolution tasks. The final datasets in the csv format with all the features can be found [here](https://github.com/IlyasAzeem/PROMPT/tree/master/Replication_Package/Dataset_CSV_Files) in the zipped format.
 ###### Import data to MySql
 We created a database in MySql Community Server and imported all the pull requests data into the database using python script available [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/import_data_to_db.py). Before importing data to the database we split the accept.csv file into various lists according to the tables in the database. The script used for splitting the accept.csv file is given [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/create_list_for_db.py). For the response table, the daily responses of the pull requests in table Pull_Request are imported from the response.csv. After spliting the list use the script [create_tables](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db/create_tables.py) to create all the tables the database. The PROMPT dataset in the database format is avaiable [here](https://github.com/IlyasAzeem/PROMPT/blob/master/Replication_Package/Import_data_to_db).
-
-
+###### How to use the dataset and run the script
+The usage of the underline used python script is the following
+'''
+1. First run the script create_list_for_db.py
+2. Then create a database in MySql Community server workbench 
+3. Run the script create_tables.py to create all the required tables
+4. At the end run the script Import_data_to_db.py to import the data to the database
+'''
 
 
 ## References
